@@ -136,28 +136,7 @@
                       </div> 
               </div>
               
-          </section>
-        <script type="text/javascript">
-            const data = { data: 'tbody' };
-
-            //POST request with body equal on data in JSON format
-            fetch('http://10.101.249.88:30681/cart', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            })
-                .then((response) => response.json())
-                //Then with the data from the response in JSON...
-                .then((data) => {
-                    console.log('Success:', data);
-                })
-                //Then with the error genereted...
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-        </script>
+          </section>        
         <hr class="divider-d">
         <footer class="footer bg-dark">
           <div class="container">

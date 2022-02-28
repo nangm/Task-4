@@ -255,8 +255,26 @@ function getCartsByCustomerId()
     	
     	e.preventDefault();
       console.log(sessionStorage.products);
-      	 var products = JSON.parse(sessionStorage.products);
+      	 var products = JSON.parse(sessionStorage.products);      
+           
 
+            //POST request with body equal on data in JSON format
+            fetch('http://10.101.249.88:30681/cart', {
+                method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(products),
+            })
+                .then((response) => response.json())
+                //Then with the data from the response in JSON...
+                .then((data) => {
+                console.log('Success:', data);
+                })
+                //Then with the error genereted...
+                .catch((error) => {
+                console.error('Error:', error);
+                });
          //products list as JSON
          console.log(products);
     	alert("check out");
