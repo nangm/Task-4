@@ -259,7 +259,7 @@ function getCartsByCustomerId()
            
 
             //POST request with body equal on data in JSON format
-            fetch('http://10.101.249.88:30681/cart', {
+            fetch('http://10.101.249.88:30681/api/carts', {
                 method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
