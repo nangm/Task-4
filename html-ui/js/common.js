@@ -268,8 +268,8 @@ function getCartsByCustomerId()
             })
                 .then((response) => response.json())
                 //Then with the data from the response in JSON...
-                .then((data) => {
-                console.log('Success:', data);
+                .then((products) => {
+                    console.log('Success:', products);
                 })
                 //Then with the error genereted...
                 .catch((error) => {
